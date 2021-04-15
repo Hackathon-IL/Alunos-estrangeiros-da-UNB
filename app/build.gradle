@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.gbegbe.app"
+        minSdkVersion 18
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips",'arm64-v8a','x86_64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        google()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.ramotion.paperonboarding:paper-onboarding:1.1.3'
+
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
+    implementation 'com.google.firebase:firebase-ml-vision-image-label-model:20.0.1'
+
+
+    implementation 'com.google.firebase:firebase-database:19.5.0'
+
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation "com.airbnb.android:lottie:3.4.0"
+    implementation 'com.karumi:dexter:6.2.1'
+
+    implementation "org.androidannotations:rest-spring:4.3.0"
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.android.support:multidex:1.0.3'
+
+
+    implementation 'com.google.android.gms:play-services-ads:19.4.0'
+
+
+    //-------- firebse
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Gbégbè</string>
+
+    <string name="enAntonym">Antonym :</string>
+    <string name="enGrammer">Grammar :</string>
+    <string name="enMeaning">Meaning :</string>
+    <string name="enSynonym">Synonym :</string>
+    <string name="hAntonym">विलोम :</string>
+    <string name="hGrammer">व्याकरण :</string>
+    <string name="hMeaning">अर्थ :</string>
+    <string name="hSynonym">पर्याय :</string>
+
+
+    <string name="touchtoinsert">Insira seu texto aqui</string>
+    <string name="transtext">Texto traduzido aqui</string>
+
+
+    <string name="admob_banner">ca-app-pub-2085609922443997/3447939547</string>
+    <string name="admob_native_advance"></string>
+    <string name="interstitial_full_screen"></string>
+    <string name="admob_appid">ca-app-pub-2085609922443997~6507780363</string>
+
+
+</resources>
